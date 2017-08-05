@@ -1,0 +1,114 @@
+
+#box{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin:80px auto 0 auto;
+    -webkit-animation-name: animation;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 80px 80px 0;
+    -webkit-transform: rotateX(-30deg) rotateY(-60deg);
+
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transform-style: preserve-3d;
+    transform-origin: 80px 80px 0;
+    ransform: rotateX(-30deg) rotateY(-60deg);
+
+    perspective-origin: 1000px 1000px;
+    /*perspective: 1000px;*/
+}
+
+.face{
+    position: absolute;
+    left:0;
+    top:0;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    outline: #000 solid 1px;
+
+    /*background: yellow;*/
+}
+.face div{
+    width: 66px;
+    height: 66px;
+    /*background: red;*/
+    float: left;
+    border-radius: 15px;
+
+}
+.face:nth-child(1){
+    transform: rotateX(90deg) translateZ(100px);
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+}
+.face:nth-child(2){
+    transform: rotateX(270deg) translateZ(100px);
+    -webkit-transform: rotateX(270deg) translateZ(100px);
+
+}
+.face:nth-child(3){
+   transform: rotateY(270deg) translateZ(100px);
+    -webkit-transform: rotateY(270deg) translateZ(100px);
+
+}
+.face:nth-child(4){
+   transform: rotateY(90deg) translateZ(100px);
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+
+}
+.face:nth-child(5){
+    transform:  translateZ(100px);
+    -webkit-transform:  translateZ(100px);
+
+}
+.face:nth-child(6){
+    transform: rotateY(180deg) translateZ(100px);
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+
+}
+
+.face:nth-child(1) div{
+    background: yellow;
+}
+.face:nth-child(2) div{
+    background: red;
+}
+.face:nth-child(3) div{
+    background: green;
+}
+.face:nth-child(4) div{
+    background: blue;
+}
+.face:nth-child(5) div{
+    background: cornflowerblue;
+}
+
+@keyframes animation {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes animation {
+    0%{
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        -webkit-transform: rotateX(90deg) rotateY(90deg);
+    }
+    100%{
+        -webkit-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
